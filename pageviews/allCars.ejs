@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <main>
+        <h2>All persons</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Number</th>
+                    <th>Model</th>
+                    <th>Licence Number</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result.forEach(car=>{ %>
+                    <tr>
+                        <td><%= car.productNumber %></td>
+                        <td><%= car.model %></td>
+                        <td><%= car.licencePlate %></td>
+                        <td><%= car.year %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/"><button>Menu</button></a>
+    </main>
+</body>
+</html>

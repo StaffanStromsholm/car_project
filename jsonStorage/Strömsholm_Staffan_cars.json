@@ -1,0 +1,63 @@
+[
+    {
+        "productNumber": 5,
+        "model": "Electro",
+        "licencePlate": "ABC-987",
+        "rating": "*",
+        "year": "2017"
+    },
+    {
+        "productNumber": 3,
+        "model": "Ovlov",
+        "licencePlate": "XYZ-1",
+        "rating": "**",
+        "year": "1990"
+    },
+    {
+        "productNumber": 6,
+        "model": "Min IEco",
+        "licencePlate": "ABC-12",
+        "rating": "*",
+        "year": "2005"
+    },
+    {
+        "productNumber": 2,
+        "model": "Moustin",
+        "licencePlate": "LAK-1",
+        "rating": "*****",
+        "year": "2012"
+    },
+    {
+        "productNumber": 4,
+        "model": "FauWee",
+        "licencePlate": "AAS-1",
+        "rating": "***",
+        "year": "1995"
+    },
+    {
+        "productNumber": 1,
+        "model": "Drof",
+        "licencePlate": "PEL-1",
+        "rating": "****",
+        "year": "2011"
+    },
+    {
+        "productNumber": 7,
+        "model": "Racer",
+        "licencePlate": "EKO-1",
+        "rating": "**",
+        "year": "2015"
+    },
+    {
+        "productNumber": 24,
+        "model": "fhjgf",
+        "licencePlate": "lakhdsf",
+        "year": "03945"
+    },
+    {
+        "productNumber": 63,
+        "model": "sagdsfg",
+        "licencePlate": "ALÖ-3",
+        "year": "2346"
+    }
+]
