@@ -64,7 +64,7 @@ function createDataStorage() {
     }
     async function updateStorage(car) {
         let storage = await readStorage();
-        const oldCar = stogage.find(oldCar => oldCar.productNumber == car.productNumber);
+        const oldCar = storage.find(oldCar => oldCar.productNumber == car.productNumber);
         if (oldCar) {
             Object.assign(oldCar, {
                 productNumber: +car.productNumber,

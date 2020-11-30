@@ -59,5 +59,33 @@
         "model": "sagdsfg",
         "licencePlate": "ALÖ-3",
         "year": "2346"
+    },
+    {
+        "productNumber": 9,
+        "model": "LKAJSD",
+        "licencePlate": "OSP-8397",
+        "rating": "***",
+        "year": "2002"
+    },
+    {
+        "productNumber": 100,
+        "model": "lkwjer",
+        "licencePlate": "JEK-839",
+        "rating": "****",
+        "year": "2983"
+    },
+    {
+        "productNumber": 345,
+        "model": "dsfhg",
+        "licencePlate": "dfhsdh",
+        "rating": "dsfh",
+        "year": "dsfh"
+    },
+    {
+        "productNumber": 8765,
+        "model": "dzfhg",
+        "licencePlate": "dfsbgfx",
+        "rating": "fxgdh",
+        "year": "fxgh"
     }
 ]

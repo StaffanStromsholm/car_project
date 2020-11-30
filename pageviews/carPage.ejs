@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Query result</title>
-    <link rel="stylesheet" href="/styles/styles.css" type="text/css">
-</head>
-<body>
+<%- include('./partials/header.ejs') %>  
+
     <main>
         <h1> Car <%= result.productNumber %> </h1>
-        <p>Car product number: <%= result.productNumber %> </p>
-        <p>Model: <%= result.model %></p>
-        <p>Licence Number: <%= result.licencePlate %></p>
-        <p>Year: <%= result.year %></p>
+        <div class="get-car-card">
+        <p class="get-car-info">Car product number: <%= result.productNumber %> </p>
+        <p class="get-car-info">Model: <%= result.model %></p>
+        <p class="get-car-info">Licence Number: <%= result.licencePlate %></p>
+        <p class="get-car-info">Rating: <%= result.rating %></p>
+        <p class="get-car-info">Year: <%= result.year %></p>
         <a href="/"><button>Menu</button></a>
+    </div>
     </main>
 </body>
 </html>

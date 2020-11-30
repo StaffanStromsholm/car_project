@@ -1,28 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/styles/styles.css" type="text/css">
-</head>
-<body>
+<%- include('./partials/header.ejs') %>  
+
     <main>
         <h1><%= header %></h1>
         <form action="<%= action %>" method="POST">
             <div>
-                <p>
+                <p class="form-group">
                     <label for="productNumber">Product Number</label>
                     <input type="text" id="productNumber" name="productNumber" size="5" value="<%= productNumber.value %>" <%= productNumber.readonly %>>
                 </p>
-                <p>
+                <p class="form-group">
                     <label for="model">Model</label>
                     <input type="text" id="model" name="model" size="5" value="<%= model.value %>" <%= model.readonly %>>
                 </p>
-                <p>
+                <p class="form-group">
                     <label for="licencePlate">Licence Number</label>
                     <input type="text" id="licencePlate" name="licencePlate" size="5" value="<%= licencePlate.value %>" <%= licencePlate.readonly %>>
                 </p>
-                <p>
+                <p class="form-group">
+                    <label for="rating">Rating</label>
+                    <input type="text" id="rating" name="rating" size="5" value="<%= rating.value %>" <%= rating.readonly %>>
+                </p>
+                <p class="form-group">
                     <label for="year">Year</label>
                     <input type="text" id="year" name="year" size="5" value="<%= year.value %>" <%= year.readonly %>>
                 </p>

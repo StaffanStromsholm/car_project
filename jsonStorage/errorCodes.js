@@ -22,7 +22,7 @@ const MESSAGES = {
         type: 'error'
     }),
     NOT_FOUND: productNumber => ({
-        message: `No car found with productNumber ${productNumber}`,
+        message: `No car found with product number ${productNumber}`,
         code: CODES.NOT_FOUND,
         type: 'error'
     }),
@@ -37,7 +37,7 @@ const MESSAGES = {
         type:'error'
     }),
     ALREADY_IN_USE: productNumber=>({
-        message:`productNumber ${productNumber} was already in use`,
+        message:`Product number ${productNumber} was already in use`,
         code:CODES.ALREADY_IN_USE,
         type:'error'
     }),
@@ -47,7 +47,7 @@ const MESSAGES = {
         type:'info'
     }),
     NOT_REMOVED:()=>({
-        message: 'No Car found with the given productNumber. Nothing removed',
+        message: 'No Car found with the given product Number. Nothing removed',
         code: CODES.NOT_REMOVED,
         type:'error'
     }),

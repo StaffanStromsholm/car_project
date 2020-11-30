@@ -11,7 +11,7 @@ const { createDataStorage } = require(path.join(__dirname, storage.storageFolder
 const dataStorage = createDataStorage();
 
 
-const homePath = path.join(__dirname, 'home.html');
+const homePath = path.join(__dirname, 'home');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'pageviews'));
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res)=>{
-    res.sendFile(homePath);
+    res.render(homePath);
 })
 
 app.get('/all', (req, res)=> {
@@ -31,7 +31,7 @@ app.get('/all', (req, res)=> {
 app.get('/getcar', (req, res)=>{
     res.render('getCar', {
         title: 'Get',
-        header: 'Get',
+        header: 'Which one?',
         action: '/getcar'
     })
 })
@@ -53,6 +53,7 @@ app.get('/inputform', (req, res)=>{
         productNumber: {value: '', readonly: ''},
         model: {value: '', readonly: ''},
         licencePlate: {value: '', readonly: ''},
+        rating: {value: '', readonly: ''},
         year: {value: '', readonly: ''}
     })
 })
@@ -73,6 +74,7 @@ app.get('/updateform', (req, res)=>{
         productNumber: { value: '', readonly: '' },
         model: { value: '', readonly: 'readonly'},
         licencePlate: { value: '', readonly: 'readonly'},
+        rating: {value: '', readonly: 'readonly'},
         year: { value: '', readonly: 'readonly'}
     })
 });
@@ -90,7 +92,8 @@ app.post('/updatedata', async(req, res)=>{
                 action: '/updatecar',
                 productNumber:{value: car.productNumber, readonly: 'readonly'},
                 model:{value: car.model, readonly: ''},
-                licencePlate:{value: car.licenceplate, readonly: ''},
+                licencePlate:{value: car.licencePlate, readonly: ''},
+                rating: {value: car.rating, readonly: ''},                
                 year:{value: car.year, readonly: ''}
             })
         }
@@ -133,6 +136,6 @@ function sendErrorPage(res, error, title = 'Error', header = 'Error') {
     sendStatusPage(res, error, title, header);
 }
 
-function sendStatusPage(res, status, title = 'Status', header = 'Status') {
+function sendStatusPage(res, status, title = 'Status', header = 'A-OK!') {
     return res.render('statusPage', { title, header, status })
 }
