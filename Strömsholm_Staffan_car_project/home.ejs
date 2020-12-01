@@ -1,0 +1,13 @@
+<%- include('./pageviews/partials/header.ejs') %>
+<main>
+    <h1>Menu</h1>
+    <div class="menu-buttons">
+        <a href="/all"><button class="card"> <i class="fas fa-car-alt"></i><i class="fas fa-car-side"></i> <br> Show
+                list of all cars </button></a>
+        <a href="/getcar"><button class="card"><i class="fas fa-car"></i><br>Get specific car</button></a>
+        <a href="/inputform"><button class="card"><i class="fas fa-plus"></i><br>Add new car to collection </button></a>
+        <a href="/updateform"><button class="card"><i class="fas fa-wrench"></i> <br> Update car</button></a>
+        <a href="/removecar"><button class="card"><i class="fas fa-trash-alt"></i><br>Remove a car</button></a>
+    </div>
+</main>
+<%- include('./pageviews/partials/footer.ejs') %>

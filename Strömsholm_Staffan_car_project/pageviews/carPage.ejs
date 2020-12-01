@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %>  
+
+    <main>
+        <h1> Car <%= result.productNumber %> </h1>
+        <div class="get-car-card">
+        <p class="get-car-info">Car product number: <%= result.productNumber %> </p>
+        <p class="get-car-info">Model: <%= result.model %></p>
+        <p class="get-car-info">Licence Number: <%= result.licencePlate %></p>
+        <p class="get-car-info">Rating: <%= result.rating %></p>
+        <p class="get-car-info">Year: <%= result.year %></p>
+        <a href="/"><button>Menu</button></a>
+    </div>
+    </main>
+
+<%- include('./partials/footer.ejs') %>

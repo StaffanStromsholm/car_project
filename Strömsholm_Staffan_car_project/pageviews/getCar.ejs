@@ -1,0 +1,19 @@
+<%- include('./partials/header.ejs') %>
+
+<main>
+    <h1><%= header %></h1>
+    <form action="<%= action %>" method="POST">
+        <p>
+            <label for="productNumber">Product Number</label>
+            <select name="productNumber" id="productNumber">
+                <% result.map(car => { %>
+                <option name="<%= car.productNumber %>" value="<%= car.productNumber %>"><%= car.productNumber %>
+                </option>
+                <% }) %>
+            </select>
+        </p>
+        <button type="submit"><%= button %></button>
+    </form>
+</main>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100;
+    height: 50px;
+    background-color: rgb(57, 57, 131);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.logo {
+    padding: 1rem;
+}
+
+.logo a, .car-logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.car-logo {
+    padding: 1rem;
+}
+
+main, form {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    margin: 2rem;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    margin: 2rem;
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input, select {
+    border: none;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    float: right;
+    width: 100px;
+    margin-left: 1rem;
+}
+
+input[readonly], select[disabled]{
+    background-color: rgb(228, 228, 228);
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+table, th, td {
+    border: solid black 1px;
+    padding: 0.5em;
+}
+
+thead {
+    background-color: rgb(57, 57, 131);
+    color: white;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    width: 13em;
+    height: 2rem;
+    margin: .5rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+button.card {
+    width: 13em;
+    height: 5rem;
+    margin: .5rem;
+    font-size: 1rem;
+    background-color: rgb(57, 57, 131);
+    color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 5px 0;
+}
+
+button i {
+    padding: .5rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.get-car-card {
+    width: 300px;
+    background-color: rgb(57, 57, 131);
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.get-car-info {
+    margin-top: 1rem;
+}
+
+.get-car-card button {
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+p.error {
+    border: solid red 2px;
+    background-color: rgb(252, 148, 148);
+    border-radius: 5px;
+    padding: 1rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+p.info {
+    border: solid green 2px;
+    background-color: rgb(144, 222, 144);
+    border-radius: 5px;
+    padding: 1rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+    background-color: rgb(57, 57, 131);
+}
+
+footer p {
+    font-size: 2rem;
+}
