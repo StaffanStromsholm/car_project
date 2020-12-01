@@ -6,14 +6,15 @@
         <p>
             <label for="productNumber">Product Number</label>
             <select name="productNumber" id="productNumber">
+                <option value="" selected disabled></option>
                 <% result.map(car => { %>
                 <option name="<%= car.productNumber %>" value="<%= car.productNumber %>"><%= car.productNumber %>
                 </option>
                 <% }) %>
             </select>
         </p>
-        <button type="submit"><%= button %></button>
-    </form>
+        <button type="submit"><%= button %></button><a href="/"><button type="button">Back</button></a> 
+    </<button>
 </main>
 
 <%- include('./partials/footer.ejs') %>
