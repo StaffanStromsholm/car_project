@@ -1,19 +1,5 @@
 [
     {
-        "productNumber": 5,
-        "model": "Electro",
-        "licencePlate": "ABC-987",
-        "rating": "*",
-        "year": "2017"
-    },
-    {
-        "productNumber": 3,
-        "model": "Ovlov",
-        "licencePlate": "XYZ-1",
-        "rating": "**",
-        "year": "1990"
-    },
-    {
         "productNumber": 6,
         "model": "Min IEco",
         "licencePlate": "ABC-12",
@@ -49,30 +35,11 @@
         "year": "2015"
     },
     {
-        "productNumber": 24,
-        "model": "fhjgf",
-        "licencePlate": "lakhdsf",
-        "year": "03945"
-    },
-    {
-        "productNumber": 63,
-        "model": "sagdsfg",
-        "licencePlate": "ALÖ-3",
-        "year": "2346"
-    },
-    {
         "productNumber": 9,
         "model": "LKAJSD",
         "licencePlate": "OSP-8397",
         "rating": "***",
         "year": "2002"
-    },
-    {
-        "productNumber": 100,
-        "model": "lkwjer",
-        "licencePlate": "JEK-839",
-        "rating": "****",
-        "year": "2983"
     },
     {
         "productNumber": 345,
@@ -87,5 +54,26 @@
         "licencePlate": "dfsbgfx",
         "rating": "fxgdh",
         "year": "fxgh"
+    },
+    {
+        "productNumber": 999,
+        "model": "LKJD",
+        "licencePlate": "JDO-93408",
+        "rating": "",
+        "year": "1990"
+    },
+    {
+        "productNumber": 998,
+        "model": "SDF",
+        "licencePlate": "JDI-940",
+        "rating": "*****",
+        "year": "2022"
+    },
+    {
+        "productNumber": 75,
+        "model": "Kodacs",
+        "licencePlate": "KJD-&#/",
+        "rating": "*****",
+        "year": "03945"
     }
 ]

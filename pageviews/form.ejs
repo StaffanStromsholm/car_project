@@ -1,33 +1,53 @@
-<%- include('./partials/header.ejs') %>  
+<%- include('./partials/header.ejs') %>
 
-    <main>
-        <h1><%= header %></h1>
-        <form action="<%= action %>" method="POST">
-            <div>
-                <p class="form-group">
-                    <label for="productNumber">Product Number</label>
-                    <input type="text" id="productNumber" name="productNumber" size="5" value="<%= productNumber.value %>" <%= productNumber.readonly %>>
-                </p>
-                <p class="form-group">
-                    <label for="model">Model</label>
-                    <input type="text" id="model" name="model" size="5" value="<%= model.value %>" <%= model.readonly %>>
-                </p>
-                <p class="form-group">
-                    <label for="licencePlate">Licence Number</label>
-                    <input type="text" id="licencePlate" name="licencePlate" size="5" value="<%= licencePlate.value %>" <%= licencePlate.readonly %>>
-                </p>
-                <p class="form-group">
-                    <label for="rating">Rating</label>
-                    <input type="text" id="rating" name="rating" size="5" value="<%= rating.value %>" <%= rating.readonly %>>
-                </p>
-                <p class="form-group">
-                    <label for="year">Year</label>
-                    <input type="text" id="year" name="year" size="5" value="<%= year.value %>" <%= year.readonly %>>
-                </p>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-        <a href="/"><button>Menu</button></a>
-    </main>
-</body>
-</html>
+<main>
+    <h1><%= header %></h1>
+    <form action="<%= action %>" method="POST">
+        <div>
+            <% if(!result){ %>
+            <p class="form-group">
+                <label for="productNumber">Product Number</label>
+                <input type="text" id="productNumber" name="productNumber" size="5" value="<%= productNumber.value %>"
+                    <%= productNumber.readonly %>>
+            </p>
+
+            <% } else { %>
+            <p class="form-group">
+                <label for="productNumber">Product Number</label>
+                <select name="productNumber" id="productNumber">
+                    <% result.map(car => { %>
+                    <option value="<%= car.productNumber %>"> <%= car.productNumber %> </option>
+                    <% }) %>
+                </select>
+            </p>
+            <% } %>
+            <p class="form-group">
+                <label for="model">Model</label>
+                <input type="text" id="model" name="model" size="5" value="<%= model.value %>" <%= model.readonly %>>
+            </p>
+            <p class="form-group">
+                <label for="licencePlate">Licence Number</label>
+                <input type="text" id="licencePlate" name="licencePlate" size="5" value="<%= licencePlate.value %>"
+                    <%= licencePlate.readonly %>>
+            </p>
+            <p class="form-group">
+                <label for="rating">Rating</label>
+                <select name="rating" id="rating" value="<%= rating.value %>" <%= rating.disabled %>>
+                    <option value="*">*</option>
+                    <option value="**">**</option>
+                    <option value="***">***</option>
+                    <option value="****">****</option>
+                    <option value="*****">*****</option>
+                </select>
+            </p>
+            <p class="form-group">
+                <label for="year">Year</label>
+                <input type="text" id="year" name="year" size="5" value="<%= year.value %>" <%= year.readonly %>>
+            </p>
+        </div>
+        <button type="submit"><%= button %></button>
+    </form>
+    <a href="/"><button>Menu</button></a>
+</main>
+
+<%- include('./partials/footer.ejs') %>

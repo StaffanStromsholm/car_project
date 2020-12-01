@@ -29,10 +29,15 @@ app.get('/all', (req, res)=> {
 })
 
 app.get('/getcar', (req, res)=>{
-    res.render('getCar', {
-        title: 'Get',
-        header: 'Which one?',
-        action: '/getcar'
+    dataStorage.getAll()
+    .then(result => {
+        res.render('getCar', {
+            title: 'Get',
+            header: 'Which one?',
+            action: '/getcar',
+            button: 'Search',
+            result: result
+        });
     })
 })
 
@@ -50,10 +55,12 @@ app.get('/inputform', (req, res)=>{
         title: 'Add car',
         header: 'Add a new Car',
         action: '/insert',
+        button: 'Add',
+        result: null,
         productNumber: {value: '', readonly: ''},
         model: {value: '', readonly: ''},
         licencePlate: {value: '', readonly: ''},
-        rating: {value: '', readonly: ''},
+        rating: {value: '', disabled: ''},
         year: {value: '', readonly: ''}
     })
 })
@@ -67,15 +74,20 @@ app.post('/insert', (req, res)=>{
 });
 
 app.get('/updateform', (req, res)=>{
-    res.render('form', {
-        title: 'Update car',
-        header: 'Update car data',
-        action: '/updatedata',
-        productNumber: { value: '', readonly: '' },
-        model: { value: '', readonly: 'readonly'},
-        licencePlate: { value: '', readonly: 'readonly'},
-        rating: {value: '', readonly: 'readonly'},
-        year: { value: '', readonly: 'readonly'}
+    dataStorage.getAll()
+    .then(result => {
+        res.render('form', {
+            title: 'Update car',
+            header: 'Update car info',
+            action: '/updatedata',
+            button: 'Update',
+            result: result,
+            productNumber: { value: '', readonly: '' },
+            model: { value: '', readonly: 'readonly'},
+            licencePlate: { value: '', readonly: 'readonly'},
+            rating: {value: '', disabled: 'disabled'},
+            year: { value: '', readonly: 'readonly'}
+        })
     })
 });
 
@@ -88,12 +100,14 @@ app.post('/updatedata', async(req, res)=>{
             const car = await dataStorage.get(productNumber);
             res.render('form', {
                 title: 'Update car',
-                header: 'Update car data',
+                header: 'Update car info',
                 action: '/updatecar',
+                button: 'Update',
+                result: null,
                 productNumber:{value: car.productNumber, readonly: 'readonly'},
                 model:{value: car.model, readonly: ''},
                 licencePlate:{value: car.licencePlate, readonly: ''},
-                rating: {value: car.rating, readonly: ''},                
+                rating: {value: car.rating, disabled: ''},                
                 year:{value: car.year, readonly: ''}
             })
         }
@@ -112,15 +126,21 @@ app.post('/updatecar', (req, res)=> {
 });
 
 app.get('/removecar', (req, res)=>{
-    res.render('getCar', {
-        title: 'Remove',
-        header: 'Remove a car',
-        action: '/removecar'
-    });
+    dataStorage.getAll()
+    .then(result => {
+        res.render('getCar', {
+            title: 'Remove',
+            header: 'Remove a car',
+            action: '/removecar',
+            button: 'Remove',
+            result: result
+        });
+    })
 });
 
 app.post('/removecar', (req, res)=>{
     if(!req.body) res.sendStatus(500);
+    console.log(req.body.productNumber);
     dataStorage.remove(req.body.productNumber)
     .then(status => sendStatusPage(res, status))
     .catch(error => sendErrorPage(res, error));
