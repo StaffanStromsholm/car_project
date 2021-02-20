@@ -31,14 +31,14 @@
         "productNumber": 4,
         "model": "FauWee",
         "licencePlate": "AAS-1",
-        "rating": "***",
+        "rating": "*",
         "year": "1995"
     },
     {
         "productNumber": 1,
-        "model": "Drof",
-        "licencePlate": "PEL-1",
-        "rating": "****",
+        "model": "Drofsd",
+        "licencePlate": "dPEL-1a",
+        "rating": "***",
         "year": "2011"
     },
     {
