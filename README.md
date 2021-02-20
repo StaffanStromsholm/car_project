@@ -8,4 +8,4 @@ Run the application:
 npm install
 node index
 ```
-![](2021-02-20 13.52.49.gif)
+![](car-project.gif)
